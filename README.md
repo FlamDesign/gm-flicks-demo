@@ -1,10 +1,11 @@
 # Flicks on GM sites: concept demo
 
-Three GM vehicle pages rebuilt with Flam's Flicks:
+Four GM vehicle pages rebuilt with Flam's Flicks:
 
 - `chevrolet/silverado-1500/`: Silverado 1500 page with the Silverado Flick as the hero
-- `chevrolet/corvette/`: Corvette lineup page with the ZR1 Flick as the hero and the Grand Sport configurator
+- `chevrolet/corvette/`: Corvette lineup page with the ZR1 Flick as the hero and the Grand Sport configurator right below it
 - `gmc/sierra-1500/`: Sierra 1500 page with the Sierra Flick as the hero and the Sierra configurator in "Choose your color"
+- `gmc/hummer-ev-suv/`: HUMMER EV SUV page with the configurator as the hero
 
 "Explore Flicks" (bottom right) jumps to every Flick and configurator.
 

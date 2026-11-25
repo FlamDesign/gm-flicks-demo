@@ -1,5 +1,5 @@
 /* Vehicles, colours, mod packages and environments.
-   Colour names are the real 2027 palettes; hex values are on-screen approximations.
+   Colour names are the real palettes on chevrolet.com and gmc.com (HUMMER EV SUV: 2026, matched to gmc.com on 24 Nov 2026); hex values are on-screen approximations.
    Clip files: media/<car>_<env>_<mod>.mp4 (all in magenta key paint, 9:16, same length).
    Until a clip exists, MEDIA_FALLBACK is used so the flow can be reviewed. */
 window.GM = {
@@ -51,15 +51,17 @@ window.GM = {
       ],
     },
     {
-      id: 'hummer', name: 'GMC HUMMER EV SUV', short: 'HUMMER EV SUV', year: 2027,
+      id: 'hummer', name: 'GMC HUMMER EV SUV', short: 'HUMMER EV SUV', year: 2026,
       thumb: 'media/car_hummer.jpg', logo: 'media/logo_gmc.png', cta: 'https://www.gmc.com/electric/hummer-ev/suv',
       testDrive: 'https://www.gmc.com/request-test-drive',
       colors: [
-        { name: 'ICON', hex: '#f1c000' },
-        { name: 'Dark Ridge', hex: '#4b4e52' },
-        { name: 'Azurite Blue', hex: '#1e3d6a' },
-        { name: 'Dark Ember', hex: '#5b2b22' },
-        { name: 'Deep Void Matte', hex: '#1c1d20', spec: 0.25 },
+        { name: 'Coastal Dune', hex: '#8d8985' },
+        { name: 'Solar Orange', hex: '#c22d0e' },
+        { name: 'Graphite Blue Metallic', hex: '#262e34' },
+        { name: 'Interstellar White', hex: '#dfe6e8' },
+        { name: 'Void Black', hex: '#0a0b0b' },
+        { name: 'Meteorite Metallic', hex: '#63696d' },
+        { name: 'Deep Aurora Metallic', hex: '#3e3924' },
       ],
       mods: [
         { id: 'stock', name: 'Stock' },

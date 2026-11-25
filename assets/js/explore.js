@@ -7,6 +7,7 @@
     { site: 'chevrolet.com', name: 'Corvette Grand Sport', kind: 'Configurator · paint, package, road', page: 'chevrolet/corvette/', target: 'configurator' },
     { site: 'gmc.com', name: 'Sierra 1500', kind: 'Hero Flick · vehicle page', page: 'gmc/sierra-1500/', target: 'flick' },
     { site: 'gmc.com', name: 'Sierra 1500', kind: 'Configurator · paint, package, road', page: 'gmc/sierra-1500/', target: 'configurator' },
+    { site: 'gmc.com', name: 'HUMMER EV SUV', kind: 'Configurator · hero of the vehicle page', page: 'gmc/hummer-ev-suv/', target: 'configurator' },
   ];
   const here = (document.body.dataset.page || '');
   const btn = document.createElement('button');
