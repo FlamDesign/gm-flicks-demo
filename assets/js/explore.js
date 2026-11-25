@@ -2,12 +2,12 @@
 (function () {
   const root = document.body.dataset.root || './';
   const ITEMS = [
-    { site: 'chevrolet.com', name: 'Silverado 1500', kind: 'Hero Flick · vehicle page', page: 'chevrolet/silverado-1500/', target: 'flick' },
-    { site: 'chevrolet.com', name: 'Corvette ZR1', kind: 'Hero Flick · lineup page', page: 'chevrolet/corvette/', target: 'flick' },
-    { site: 'chevrolet.com', name: 'Corvette Grand Sport', kind: 'Configurator · paint, package, road', page: 'chevrolet/corvette/', target: 'configurator' },
-    { site: 'gmc.com', name: 'Sierra 1500', kind: 'Hero Flick · vehicle page', page: 'gmc/sierra-1500/', target: 'flick' },
-    { site: 'gmc.com', name: 'Sierra 1500', kind: 'Configurator · paint, package, road', page: 'gmc/sierra-1500/', target: 'configurator' },
-    { site: 'gmc.com', name: 'HUMMER EV SUV', kind: 'Configurator · hero of the vehicle page', page: 'gmc/hummer-ev-suv/', target: 'configurator' },
+    { group: 'Hero banners', name: 'Silverado 1500', site: 'chevrolet.com', page: 'chevrolet/silverado-1500/', target: 'flick' },
+    { group: 'Hero banners', name: 'Corvette ZR1', site: 'chevrolet.com', page: 'chevrolet/corvette/', target: 'flick' },
+    { group: 'Hero banners', name: 'Sierra 1500', site: 'gmc.com', page: 'gmc/sierra-1500/', target: 'flick' },
+    { group: 'Configurators', name: 'HUMMER EV SUV', site: 'gmc.com', page: 'gmc/hummer-ev-suv/', target: 'configurator' },
+    { group: 'Configurators', name: 'Sierra 1500', site: 'gmc.com', page: 'gmc/sierra-1500/', target: 'configurator' },
+    { group: 'Configurators', name: 'Corvette Grand Sport', site: 'chevrolet.com', page: 'chevrolet/corvette/', target: 'configurator' },
   ];
   const here = (document.body.dataset.page || '');
   const btn = document.createElement('button');
@@ -15,11 +15,11 @@
   btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg><span>Explore Flicks</span>';
   const panel = document.createElement('div');
   panel.className = 'xf-panel'; panel.hidden = true; panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', 'Explore Flicks');
-  let html = '<div class="xf-head"><b>Explore Flicks</b><button type="button" class="xf-x" aria-label="Close">×</button></div>', site = '';
+  let html = '<div class="xf-head"><b>Explore Flicks</b><button type="button" class="xf-x" aria-label="Close">×</button></div>', group = '';
   ITEMS.forEach((it, i) => {
-    if (it.site !== site) { site = it.site; html += `<div class="xf-site">${site}</div>`; }
+    if (it.group !== group) { group = it.group; html += `<div class="xf-site">${group}</div>`; }
     const on = it.page === here;
-    html += `<a class="xf-item${on ? ' is-here' : ''}" data-i="${i}" href="${root + it.page}#${it.target}"><span class="xf-ic xf-${it.target}"></span><span><b>${it.name}</b><small>${it.kind}</small></span></a>`;
+    html += `<a class="xf-item${on ? ' is-here' : ''}" data-i="${i}" href="${root + it.page}#${it.target}"><span class="xf-ic xf-${it.target}"></span><span><b>${it.name}</b><small>${it.site}</small></span></a>`;
   });
   panel.innerHTML = html;
   document.body.append(panel, btn);

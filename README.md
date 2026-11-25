@@ -7,11 +7,11 @@ Four GM vehicle pages rebuilt with Flam's Flicks:
 - `gmc/sierra-1500/`: Sierra 1500 page with the Sierra Flick as the hero and the Sierra configurator in "Choose your color"
 - `gmc/hummer-ev-suv/`: HUMMER EV SUV page with the configurator as the hero
 
-"Explore Flicks" (bottom right) jumps to every Flick and configurator.
+"Explore Flicks" (bottom right) lists the hero banners and the configurators and jumps to each.
 
 ## How it is built
 Plain static files, no build step.
-- `assets/js/flick.js` mounts each Flick from its raw tag (house setup, clicks through ExitApi) and opens the GM page set on the slot.
+- `assets/js/flick.js` mounts each Flick from its raw tag (house setup). The buttons inside the Silverado and Sierra Flicks are hidden; the Corvette ZR1 Flick's button scrolls to the configurator on the page.
 - `assets/configurator/` is the GM configurator renderer from `FlamDesign/flicks-social-apps/gm` (engine, data, grid videos, silhouettes). `engine.js` adds `halt()`/`resume()` so it only draws while on screen.
 - `assets/js/configurator.js` puts that renderer into a brand-styled module on the page.
 - Fonts load from GM's brand CDN; photography loads from chevrolet.com and gmc.com.
